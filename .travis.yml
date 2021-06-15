@@ -2,4 +2,4 @@ arch: s390x
 dist: focal
 
 script:
-  - docker run -it --rm -u root registry.access.redhat.com/ubi8/nodejs-14 bash -c "dnf install -y python3 cyrus-sasl cyrus-sasl-devel openssl-devel libffi-devel && yum update -y && dnf upgrade -y && ln -s /usr/bin/python3 /usr/bin/python && npm install -g --unsafe-perm=true --allow-root ffi-napi"
+  - docker run -t --rm -u root registry.access.redhat.com/ubi8/nodejs-14 bash -c "dnf install -y python3 cyrus-sasl cyrus-sasl-devel openssl-devel libffi-devel && yum update -y && dnf upgrade -y && ln -s /usr/bin/python3 /usr/bin/python && npm install -g --unsafe-perm=true --allow-root ffi-napi"
